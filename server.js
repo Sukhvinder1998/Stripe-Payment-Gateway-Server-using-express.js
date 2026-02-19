@@ -3,7 +3,7 @@ require('dotenv').config();
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const stripe = require("stripe")('sk_test_51QWcqiSHszh1D4vFLQE0bThUZ9OAiOsR5RmICKY7ug63tYnsYxbJR6dGtWQGS7IeqyxYqSFD4fr2eyr6krrZXCSI00x2uNnQ3Y'); // Use test key
+const stripe = require("stripe")(''); // Use test key
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -52,3 +52,4 @@ app.post("/create-payment-intent", async (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server started on PORT ${PORT}`);
 });
+
